@@ -1,0 +1,226 @@
+body {
+  background: #e5e7e8;
+  color: #000;
+  font-family: "Roboto", sans-serif;
+  padding: 20px;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  header {
+    /* flex-direction: column;
+    align-items: center; */
+    padding: 10px;
+  }
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+}
+
+#add-note-btn {
+  background-color: #96b6c5;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+#add-note-btn:hover {
+  background-color: #adc4ce;
+}
+
+#notes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.note {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.note h2 {
+  color: #96b6c5;
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.note body-text p {
+  margin: 0;
+  white-space: normal; 
+  word-wrap: break-word; 
+}
+
+.note .actions {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.note .remove-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+  background-color: rgba(255, 0, 0, 0.2);
+  padding: 5px 10px;
+  font-size: 10px;
+}
+
+.note .remove-btn:hover {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+.note .archive-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 40px;
+  display: flex;
+  gap: 10px;
+  background-color: rgba(24, 0, 178, 0.2);
+  padding: 5px 10px; 
+  font-size: 10px; 
+}
+
+.note .archive-btn:hover {
+  background-color: rgba(24, 0, 178, 0.5);
+}
+
+.note .unarchive-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 40px;
+  display: flex;
+  gap: 10px;
+  background-color: rgba(0, 100, 0, 0.2);
+  padding: 5px 10px;
+  font-size: 10px;
+}
+
+.note .unarchive-btn:hover {
+  background-color: rgba(0, 100, 0, 0.5);
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #96b6c5;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #adc4ce;
+}
+
+/* Modal Styling */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+form {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #adc4ce;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input,
+textarea {
+  display: block;
+  width: 98%;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #96b6c5;
+  background-color: #f1f0e8;
+  border-radius: 5px;
+}
+
+.flag-btn {
+  margin: 10px;
+}
+
+.loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 1000;
+  display: none; 
+  opacity: 0; 
+}
+
