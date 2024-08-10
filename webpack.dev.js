@@ -8,7 +8,7 @@ module.exports = merge(common, {
     static: {
       directory: path.join(__dirname, "dist"),
     },
-    watchFiles: ["index.html", "src/**/*"],
+    watchFiles: ["public/index.html", "src/**/*"],
     open: true,
     client: {
       overlay: {
