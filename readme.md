@@ -5,3 +5,6 @@ Ini adalah submission akhir untuk Intermediate Frontend pada program DBS x Dicod
 
 ## Perintah
 ![Screenshot](src/image/ss-tugas.png)
+
+## Output
+![Screenshot](src/image/preview/Macbook-Air-localhost.png)
