@@ -4,7 +4,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'production',
-  entry: './src/app.js',  // Ubah dari './src/index.js' ke './src/app.js'
+  entry: './src/app.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
@@ -24,13 +24,14 @@ module.exports = {
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: './src/index.html',
-    }),
     new CopyWebpackPlugin({
       patterns: [
         { from: 'public', to: '.' },
       ],
+    }),
+    new HtmlWebpackPlugin({
+      template: './public/index.html',
+      filename: 'index.html', // Make sure this is not conflicting with any other files
     }),
   ],
 };
